@@ -38,48 +38,34 @@ int Calculate(int firstVal, int secondVal, char opr) {
 	const float pi = 3.1415926535f;
 	switch (opr) {
 	case '+':
-		secondVal += firstVal;
-		break;
+		return secondVal + firstVal;
 	case '-':
-		secondVal = firstVal - secondVal;
-		break;
+		return firstVal - secondVal;
 	case '*':
-		secondVal *= firstVal;
-		break;
+		return secondVal * firstVal;
 	case '/':
-		secondVal = firstVal / secondVal;
-		break;
+		return firstVal / secondVal;
 	case '%':
 		cout << "Warning: Mod devision is an integer function. Deicmal digits are ignored" << endl;
-		secondVal = (int)firstVal % (int)secondVal;
-		break;
+		return (int)firstVal % (int)secondVal;
 	case '^':
-		secondVal = pow(firstVal, secondVal);
-		break;
+		return pow(firstVal, secondVal);
 	case 's':
-		secondVal = sqrt(secondVal);
-		break;
+		return sqrt(secondVal);
 	case 'a':
-		secondVal = abs(secondVal);
-		break;
+		return abs(secondVal);
 	case 'i':
-		secondVal = 1 / secondVal;
-		break;
+		return 1 / secondVal;
 	case 'd':
-		secondVal = 180 / pi * secondVal;
-		break;
+		return 180 / pi * secondVal;
 	case 'r':
-		secondVal = pi / 180 * secondVal;
-		break;
+		return pi / 180 * secondVal;
 	case 'f':
 		cout << "Warning: Factorial is an integer function. Deicmal digits are ignored" << endl;
-		secondVal = Factorial(secondVal);
-		break;
+		return Factorial(secondVal);
 	default:
 		break;
 	}
-
-	return secondVal;
 }
 
 float Calculate(float firstVal, float secondVal, char opr) {
@@ -87,46 +73,32 @@ float Calculate(float firstVal, float secondVal, char opr) {
 	const float pi = 3.1415926535f;
 	switch (opr) {
 	case '+':
-		secondVal += firstVal;
-		break;
+		return secondVal + firstVal;
 	case '-':
-		secondVal = firstVal - secondVal;
-		break;
+		return firstVal - secondVal;
 	case '*':
-		secondVal *= firstVal;
-		break;
+		return secondVal * firstVal;
 	case '/':
-		secondVal = firstVal / secondVal;
-		break;
+		return firstVal / secondVal;
 	case '%':
 		cout << "Warning: Mod devision is an integer function. Deicmal digits are ignored" << endl;
-		secondVal = (int)firstVal % (int)secondVal;
-		break;
+		return (int)firstVal % (int)secondVal;
 	case '^':
-		secondVal = pow(firstVal, secondVal);
-		break;
+		return pow(firstVal, secondVal);
 	case 's':
-		secondVal = sqrt(secondVal);
-		break;
+		return sqrt(secondVal);
 	case 'a':
-		secondVal = abs(secondVal);
-		break;
+		return abs(secondVal);
 	case 'i':
-		secondVal = 1 / secondVal;
-		break;
+		return 1 / secondVal;
 	case 'd':
-		secondVal = 180 / pi * secondVal;
-		break;
+		return 180 / pi * secondVal;
 	case 'r':
-		secondVal = pi / 180 * secondVal;
-		break;
+		return pi / 180 * secondVal;
 	case 'f':
 		cout << "Warning: Factorial is an integer function. Deicmal digits are ignored" << endl;
-		secondVal = Factorial(secondVal);
-		break;
+		return Factorial(secondVal);
 	default:
 		break;
 	}
-
-	return secondVal;
 }
