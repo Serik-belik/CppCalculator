@@ -7,11 +7,6 @@ int main() {
 	float firstVal, secondVal;
 	char opr;
 
-	float result = Calculate(1.2f, 3.4f, '+');
-	cout << "result: " << result << endl;
-	int result2 = Calculate(1, 2, '/');
-	cout << "result2: " << result2 << endl;
-
 	cout << "Enter a first value: ";
 	cin >> firstVal;
 	secondVal = firstVal;
@@ -31,11 +26,8 @@ int main() {
 		} while (!IsAllowedOperator(opr));
 
 		if (!IsUnaryOperator(opr)) {
-			do {
-				cout << "Enter a second value: ";
-				cin >> secondVal;
-				if (opr == '/' && secondVal == 0) cout << "Devision by zero is forbidden" << endl;
-			} while (opr == '/' && secondVal == 0);
+			cout << "Enter a second value: ";
+			cin >> secondVal;
 		} 
 
 		secondVal = Calculate(firstVal, secondVal, opr);

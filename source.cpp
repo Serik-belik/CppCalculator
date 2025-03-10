@@ -34,7 +34,6 @@ int Factorial(int n) {
 }
 
 int Calculate(int firstVal, int secondVal, char opr) {
-	cout << "Calculate INT" << endl;
 	const float pi = 3.1415926535f;
 	switch (opr) {
 	case '+':
@@ -44,7 +43,19 @@ int Calculate(int firstVal, int secondVal, char opr) {
 	case '*':
 		return secondVal * firstVal;
 	case '/':
-		return firstVal / secondVal;
+	{
+		try {
+			if (secondVal == 0) 
+				throw -1;
+			return firstVal / secondVal;
+		}
+		catch (int) {
+			std::cout << "Zero devision is forbidden!" << std::endl;
+			return firstVal;
+		}
+
+		break;
+	}
 	case '%':
 		cout << "Warning: Mod devision is an integer function. Deicmal digits are ignored" << endl;
 		return (int)firstVal % (int)secondVal;
@@ -69,7 +80,6 @@ int Calculate(int firstVal, int secondVal, char opr) {
 }
 
 float Calculate(float firstVal, float secondVal, char opr) {
-	cout << "Calculate FLOAT" << endl;
 	const float pi = 3.1415926535f;
 	switch (opr) {
 	case '+':
@@ -79,7 +89,19 @@ float Calculate(float firstVal, float secondVal, char opr) {
 	case '*':
 		return secondVal * firstVal;
 	case '/':
-		return firstVal / secondVal;
+	{
+		try {
+			if (secondVal == 0) 
+				throw -1;
+			return firstVal / secondVal;
+		}
+		catch (int) {
+			std::cout << "Zero devision is forbidden!" << std::endl;
+			return firstVal;
+		}
+
+		break;
+	}
 	case '%':
 		cout << "Warning: Mod devision is an integer function. Deicmal digits are ignored" << endl;
 		return (int)firstVal % (int)secondVal;
